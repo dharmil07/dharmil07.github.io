@@ -9,12 +9,12 @@ But I didn’t want that knowledge to remain theoretical. I wanted to build with
 ## MARKET Suite
 MARKET Suite is an integrated platform of six specialized tools built to simplify equity research. From market-moving news and institutional flows to technical analysis, strategy backtesting, and corporate event tracking, it provides a unified, data-driven approach to investing in Indian equities.
 
-**Market Scout**: Data-driven stock analysis and decision support using price action, volume, RSI charts and technical indicators.
-**Market Pulse**: Market-moving news intelligence aggregated from leading financial publishers, with automated deduplication for a cleaner news feed.
-**Market Edge**: Systematic pre-breakout opportunity discovery using technical and market signals to identify stocks showing early signs of momentum.
-**Market Catalyst**: Tracks insider trading, corporate actions, and preferential issues to provide a consolidated view of corporate-market activity.
-**Market Radar**: Tracks daily FII activity, bulk and block deals, and FII/DII flows to provide a consolidated view of institutional market activity.
-**Market Proof**: Historical strategy backtesting and validation across selected technical setups to evaluate trading outcomes over time.
+- **Market Scout**: Data-driven stock analysis and decision support using price action, volume, RSI charts and technical indicators.
+- **Market Pulse**: Market-moving news intelligence aggregated from leading financial publishers, with automated deduplication for a cleaner news feed.
+- **Market Edge**: Systematic pre-breakout opportunity discovery using technical and market signals to identify stocks showing early signs of momentum.
+- **Market Catalyst**: Tracks insider trading, corporate actions, and preferential issues to provide a consolidated view of corporate-market activity.
+- **Market Radar**: Tracks daily FII activity, bulk and block deals, and FII/DII flows to provide a consolidated view of institutional market activity.
+- **Market Proof**: Historical strategy backtesting and validation across selected technical setups to evaluate trading outcomes over time.
 
 ## Watch video here
 Coming soon
