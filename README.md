@@ -22,7 +22,7 @@ MARKET Suite is an integrated platform of six specialized tools built to simplif
 Coming soon
 
 ## ⚠️ Disclaimer
-This video and tool are for educational and demonstration purposes only. They do not constitute financial, investment, or trading advice. I am not a SEBI-registered research analyst or financial advisor. 
+All the tools are for educational and demonstration purposes only. They do not constitute financial, investment, or trading advice. I am not a SEBI-registered research analyst or financial advisor. 
 
 --------------------------------------------------
 © 2026 Dharmil Sanghavi. All rights reserved.
