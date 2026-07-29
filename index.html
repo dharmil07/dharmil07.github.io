@@ -315,14 +315,73 @@
     </section>
 
     <!-- Footer -->
-    <footer class="max-w-6xl mx-auto px-4 md:px-6 py-4 border-t border-slate-200 dark:border-slate-800/80 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-slate-500 dark:text-slate-500 transition-colors">
-        <div class="flex gap-6 font-medium">
-            <a href="https://github.com/dharmil07" target="_blank" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">GitHub</a>
-            <a href="https://www.linkedin.com/in/dharmilsanghavi/" target="_blank" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">LinkedIn</a>
-            <a href="mailto:hello@dharmilsanghavi.com" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">hello@dharmilsanghavi.com</a>
+    <footer class="max-w-6xl mx-auto px-4 md:px-6 pt-12 pb-6 border-t border-slate-200 dark:border-slate-800/80 text-sm text-slate-500 dark:text-slate-400 transition-colors">
+        
+        <!-- Top Section: Links & Email -->
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-6 mb-8">
+            
+            <!-- Left Side: Social Links -->
+            <div class="flex gap-6 font-medium">
+                <a href="https://github.com/dharmil07" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">GitHub</a>
+                <a href="https://www.linkedin.com/in/dharmilsanghavi/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">LinkedIn</a>
+            </div>
+            
+            <!-- Right Side: Email -->
+            <div class="font-medium">
+                <a href="mailto:hello@dharmilsanghavi.com" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">hello@dharmilsanghavi.com</a>
+            </div>
+            
         </div>
-        <p class="font-medium">© 2026 Dharmil Sanghavi. All rights reserved.</p>
+        
+        <!-- Bottom Section: Copyright & Terms -->
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-6 border-t border-slate-200 dark:border-slate-800/80">
+            
+            <!-- Left Side: Copyright -->
+            <p class="font-medium">© 2026 Dharmil Sanghavi. All rights reserved.</p>
+            
+            <!-- Right Side: Terms of Use Modal Trigger -->
+            <button onclick="openTermsModal()" class="font-medium hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors cursor-pointer">Terms of Use</button>
+            
+        </div>
+        
     </footer>
+
+    <!-- Terms of Use Modal (Hidden by default) -->
+    <div id="termsModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm transition-opacity">
+    
+    <!-- Modal Content Box -->
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8">
+        
+        <!-- Header & Close Button -->
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Terms of Use</h2>
+            <button onclick="closeTermsModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+        
+        <!-- Legal Text -->
+        <div class="space-y-4 text-sm md:text-base text-slate-600 dark:text-slate-300">
+            <p>By accessing or using MARKET Suite, you agree to the following terms:</p>
+            
+            <p><strong>Ownership & Intellectual Property:</strong> MARKET Suite™ and all associated software, code, algorithms, visual design, and branding are the exclusive intellectual property of Dharmil Sanghavi (Mumbai, India). All rights reserved.</p>
+            
+            <p><strong>Acceptable Use:</strong> You are granted a limited, non-exclusive right to access and use the platform for personal or internal business purposes. Scraping, reverse engineering, automated data collection, or copying any code or assets without prior written consent is strictly prohibited.</p>
+            
+            <p><strong>Disclaimer:</strong> All tools, data, and analytical outputs provided on MARKET Suite are on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind. Content is provided for informational and educational purposes only and does not constitute financial, investment, or legal advice.</p>
+            
+            <p><strong>Limitation of Liability:</strong> To the maximum extent permitted by law, the operator (Dharmil Sanghavi) shall not be liable for any direct, indirect, or consequential losses resulting from your use of, or inability to use, the platform.</p>
+            
+            <p><strong>Contact & Inquiries:</strong> <a href="mailto:hello@dharmilsanghavi.com" class="text-indigo-600 dark:text-indigo-400 hover:underline">hello@dharmilsanghavi.com</a></p>
+        </div>
+        
+        <!-- Acknowledge Button -->
+        <div class="mt-8 flex justify-end">
+            <button onclick="closeTermsModal()" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-colors">Acknowledge & Close</button>
+        </div>
+        
+    </div>
+</div>
 
     <!-- Scripts -->
     <script>
@@ -353,6 +412,30 @@
 
         // Initial check to set the correct icon on page load
         updateIcon();
+
+        // ==========================================
+        // Terms of Use Modal Logic
+        // ==========================================
+        function openTermsModal() {
+            const modal = document.getElementById('termsModal');
+            modal.classList.remove('hidden');
+            // Prevent background scrolling while modal is open
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closeTermsModal() {
+            const modal = document.getElementById('termsModal');
+            modal.classList.add('hidden');
+            // Restore background scrolling
+            document.body.style.overflow = 'auto'; 
+        }
+
+        // Allow closing the modal by clicking the background overlay
+        document.getElementById('termsModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeTermsModal();
+            }
+        });
     </script>
 </body>
 </html>
