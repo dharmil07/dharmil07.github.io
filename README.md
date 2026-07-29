@@ -1,4 +1,4 @@
-# dharmil07.github.io
+# MARKET Suite™ | Built by Dharmil Sanghavi
 Showcasing the intersection of financial markets, data, and technology by Dharmil Sanghavi. Home to the MARKET Suite, featuring six distinct tools for analyzing and tracking Indian equities.
 
 ## About me
